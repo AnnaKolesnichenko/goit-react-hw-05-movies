@@ -1,0 +1,29 @@
+.reviews {
+    margin: 10px;
+}
+
+.items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.item {
+
+}
+
+.author {
+    margin-top: 0;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    color: rgb(5, 47, 138);
+}
+
+.details {
+    margin-top: 0;
+    font-size: 12px;
+    font-family: 'Montserrat';
+}

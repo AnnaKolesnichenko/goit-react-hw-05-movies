@@ -1,0 +1,86 @@
+.movie {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    font-family: 'Montserrat';
+}
+
+.image {
+    width: 230px;
+    height: 280px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.32);
+}
+
+.movie_title {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.details {
+    margin-top: 0;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.back_btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 100px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    margin-right: 20px;
+    border: 1px solid rgb(151, 190, 244);
+}
+
+.back_btn:hover,
+.back_btn:focus {
+    background-color: rgb(32, 119, 239);
+    color: white;
+}
+
+.additional_title {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: solid 1px rgb(151, 190, 244);
+}
+
+.link_list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgb(151, 190, 244);
+}
+
+.link_list a {
+    display: block;
+    padding: 5px 10px;
+    width: 100px;
+    border: 1px solid rgb(151, 190, 244);
+    text-align: center;
+    border-radius: 15px;
+    text-decoration: none;
+    color: rgb(10, 35, 93);
+    font-family: 'Montserrat';
+}
+
+.link_list a:hover,
+.link_list a:active {
+    background-color: rgb(32, 119, 239);
+    color: white;
+}

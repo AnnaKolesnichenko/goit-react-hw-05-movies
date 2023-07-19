@@ -1,0 +1,20 @@
+.shared {
+  display: flex;
+  gap: 30px;
+  padding: 20px 30px;
+  border-bottom: 1px solid rgb(151, 190, 244);
+}
+
+.shared_link {
+  display: block;
+  font-family: 'Montserrat';
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(9, 9, 45);
+}
+
+.shared_link:hover, 
+.shared_link:active {
+  color: rgb(95, 115, 239);
+}

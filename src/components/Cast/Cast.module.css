@@ -1,0 +1,33 @@
+.cast {
+    margin: 10px;
+}
+
+.actors {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.actor {
+    width: 170px;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.actor_descr {
+    text-decoration: none;
+    color: rgb(12, 28, 83);
+    text-align: center;
+}
+
+.image {
+    width: 170px;
+    height: 255px;
+}
+
+
+.name {
+    font-size: 14px;
+}

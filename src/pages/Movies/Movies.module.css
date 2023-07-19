@@ -1,0 +1,72 @@
+.search_form {
+    margin: 20px;
+}
+
+.add {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input_field {
+    padding: 10px 15px;
+    width: 300px;
+    border-radius: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border: 1px solid rgb(151, 190, 244);
+}
+
+.search_btn {
+    padding: 10px 15px;
+    width: 100px;
+    border-radius: 15px;
+    margin-right: 20px;
+    border: 1px solid rgb(151, 190, 244);
+}
+
+.search_btn:hover,
+.serach_btn:focus {
+    background-color: rgb(32, 119, 239);
+    color: white;
+}
+
+.input_field:hover,
+.input_field:focus {
+    border: 1px solid rgb(32, 119, 239);
+}
+
+.searched_movies {
+    display: flex;
+    flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* .item {
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    border-radius: 5px;
+    padding-bottom: 10px;
+} */
+
+/* .movie_item {
+    width: 180px;
+    height: 300px;
+    text-decoration: none;
+    box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+} */
+
+/* .movie_title {
+    margin-bottom: 0;
+    font-size: 12px;
+    text-align: center;
+    color: rgb(14, 33, 108);
+} */
+
+
+
