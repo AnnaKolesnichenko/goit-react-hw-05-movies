@@ -10,7 +10,7 @@ import style from './MovieDetails.module.css';
 const MovieDetails = () => {
   const { movieId } = useParams();
   const location = useLocation();
-  const lastQueryRef = useRef('/movies');
+  const lastQueryReference = useRef('/movies');
 
   const [movie, setMovie] = useState([]);
   const [error, setError] = useState(false);
@@ -31,13 +31,13 @@ const MovieDetails = () => {
 
   useEffect(() => {
     if(location.state && location.state.from) {
-      lastQueryRef.current = location.state.from;
+      lastQueryReference.current = location.state.from;
     }
   }, [location.state]);
 
   return (
     <div style={{ marginLeft: 10 }}>
-      <Link to={lastQueryRef.current}>
+      <Link to={lastQueryReference.current}>
         <button type="button" className={style.back_btn}>Go back</button>
       </Link>
 
@@ -73,10 +73,10 @@ const MovieDetails = () => {
         Additional information
       </h2>
       <ul className={style.link_list}>
-        <li to={location.state ? location.state.from : '/movies?query'}>
+        <li>
           <Link to="cast" >Cast</Link>
         </li>
-        <li to={location.state ? location.state.from : '/movie?query'}>
+        <li>
           <Link to="reviews" >Reviews</Link>
         </li>
       </ul>
