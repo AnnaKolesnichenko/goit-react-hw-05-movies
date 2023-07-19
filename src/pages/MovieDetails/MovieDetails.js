@@ -1,5 +1,5 @@
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 import { fetchMovieById } from 'services/ApiServices';
 import { getPoster } from 'services/ApiServices';
@@ -10,11 +10,11 @@ import style from './MovieDetails.module.css';
 const MovieDetails = () => {
   const { movieId } = useParams();
   const location = useLocation();
+  const lastQueryRef = useRef('/movies');
 
   const [movie, setMovie] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-
 
   useEffect(() => {
     setLoading(true);
@@ -29,9 +29,15 @@ const MovieDetails = () => {
       });
   }, [movieId]);
 
+  useEffect(() => {
+    if(location.state && location.state.from) {
+      lastQueryRef.current = location.state.from;
+    }
+  }, [location.state]);
+
   return (
     <div style={{ marginLeft: 10 }}>
-      <Link to={location.state ? location.state.from : '/'}>
+      <Link to={lastQueryRef.current}>
         <button type="button" className={style.back_btn}>Go back</button>
       </Link>
 
@@ -67,11 +73,11 @@ const MovieDetails = () => {
         Additional information
       </h2>
       <ul className={style.link_list}>
-        <li>
-          <Link to="cast">Cast</Link>
+        <li to={location.state ? location.state.from : '/movies?query'}>
+          <Link to="cast" >Cast</Link>
         </li>
-        <li>
-          <Link to="reviews">Reviews</Link>
+        <li to={location.state ? location.state.from : '/movie?query'}>
+          <Link to="reviews" >Reviews</Link>
         </li>
       </ul>
       <Outlet />

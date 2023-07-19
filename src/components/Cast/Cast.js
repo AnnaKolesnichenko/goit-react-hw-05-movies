@@ -36,7 +36,7 @@ const Cast = () => {
       {loading ? <p>Loading cast....</p> : (
         <ul className={style.actors}>
         {cast.map(actor => (
-          <li className={style.actor}  key={actor.cast_id}>
+          <li className={style.actor} key={actor.cast_id} state={{from: location}}>
             <Link >
             <img className={style.image} src={actor.profile_path === null ? DeafaultPoster : `https://image.tmdb.org/t/p/w154/${actor.profile_path}` } alt={actor.name} />
             <div className={style.actor_descr}>

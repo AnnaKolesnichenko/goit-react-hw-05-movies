@@ -5,7 +5,7 @@ import style from './MovieList.module.css';
 
 const MovieList = ({movies}) => {
     const location = useLocation();
-    console.log(movies);
+    console.log(location);
 
     // if(!movies|| movies.length === 0) {
     //   return <NonExisting/>;

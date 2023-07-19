@@ -1,6 +1,6 @@
 // import MovieDetails from '../movieDetails/MovieDetails';
-import { useState, useEffect } from 'react';
-import { useSearchParams} from 'react-router-dom';
+import { useState, useEffect, useRef } from 'react';
+import { useSearchParams, useLocation } from 'react-router-dom';
 
 import { fetchMoviesByQuery } from 'services/ApiServices';
 import Loader from 'components/Loader/Loader';
@@ -16,7 +16,8 @@ const Movies = () => {
   const [loading, setLoading] = useState(false);
 
   const searchQuery = searchParams.get('query');
-  console.log(searchQuery);
+  const location = useLocation();
+  const memoLocation = useRef(location.current);
 
   useEffect(() => {      
     if(!searchQuery) {
@@ -57,7 +58,7 @@ const Movies = () => {
       </form>
       {error && <NonExisting/>}
       {loading && <Loader/>}      
-      {movies.length > 0 && <MovieList movies={movies}/>}
+      {movies.length > 0 && <MovieList state={{from: location}} lo={memoLocation} movies={movies}/>}
     </div>
   );
 };
