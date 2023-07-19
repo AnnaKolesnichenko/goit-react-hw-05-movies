@@ -45,7 +45,7 @@ const Movies = () => {
 
 
   return (
-    <div className={style.add}>
+    <div className={style.form_section}>
       <form className={style.search_form} onSubmit={handleSubmit}>
         <input
           type="text"
