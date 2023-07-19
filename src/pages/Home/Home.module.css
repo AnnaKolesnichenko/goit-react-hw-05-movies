@@ -4,8 +4,9 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  gap: 10px;
+  gap: 20px;
   justify-content: center;
+  list-style: none;
 }
 
 .title {
@@ -21,7 +22,11 @@
   color: rgb(19, 19, 71);
   border-radius: 5px;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.32);
+}
+
+.trending_item a{
   text-decoration: none;
+  color: rgb(19, 19, 71);
 }
 
 .trending_item img {
@@ -32,5 +37,10 @@
 
 .movie_title {
   margin-left: 5px;
+  text-decoration: none;
+}
+
+.movie_title a{
+  text-decoration: none;
 }
 
