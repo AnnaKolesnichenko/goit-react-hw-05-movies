@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { fetchTrending } from 'services/ApiServices';
-import { getPoster } from 'services/ApiServices';
+import MovieList from 'components/MovieList/MovieList';
 
 import style from './Home.module.css';
 
@@ -21,24 +21,7 @@ const Home = () => {
   return (
     <div>
       <h1 className={style.title}>Trending today</h1>
-      <ul className={style.trending_list}>
-        {trenderMovies.map(movie =>
-        <li className={style.trending_item} key={movie.id}>
-          <Link
-              to={`/movies/${movie.id}`}
-              state={{ from: location }}
-            >
-              <img
-                src={getPoster(movie)}
-                alt={movie.title}
-              />
-              <h3 className={style.movie_title}>
-                {movie.title ? movie.title : <p>Be added soon...</p>}
-                </h3>
-          </Link>
-        </li>
-        )}
-      </ul>
+      {trenderMovies.length > 0 && <MovieList movies={trenderMovies}/>}
     </div>
   );
 };

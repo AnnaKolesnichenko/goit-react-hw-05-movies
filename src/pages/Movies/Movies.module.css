@@ -42,16 +42,6 @@
     border: 0.5px solid rgb(32, 119, 239);
 }
 
-.searched_movies {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-}
-
 .form_section {
     display: flex;
     flex-direction: column;

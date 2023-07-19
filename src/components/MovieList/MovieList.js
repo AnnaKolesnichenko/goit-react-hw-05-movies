@@ -12,7 +12,7 @@ const MovieList = ({movies}) => {
     // }
 
     return (
-        <>
+        <ul className={style.searched_movies}>
             {movies.map(movie => (
             <li className={style.movie_item} key={movie.id}>
               <Link        
@@ -33,7 +33,7 @@ const MovieList = ({movies}) => {
               </Link>
             </li>
         ))}
-        </>
+        </ul>
     )
 }
 

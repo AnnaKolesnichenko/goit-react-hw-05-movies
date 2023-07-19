@@ -56,10 +56,8 @@ const Movies = () => {
         <button type="submit" className={style.search_btn}>Search</button>
       </form>
       {error && <NonExisting/>}
-      {loading && <Loader/>}
-      <ul className={style.searched_movies}>
-        <MovieList movies={movies}/>
-      </ul>
+      {loading && <Loader/>}      
+      {movies.length > 0 && <MovieList movies={movies}/>}
     </div>
   );
 };
