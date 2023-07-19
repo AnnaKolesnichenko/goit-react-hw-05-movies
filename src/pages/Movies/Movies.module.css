@@ -17,7 +17,7 @@
 	border-radius: 15px 0 0 15px;
 	/* margin-right: 20px; */
 	padding: 10px 15px;
-	flex-grow: 1;
+	flex-grow: 2;
 	border-right-width: 0;
 }
 
@@ -37,8 +37,9 @@
 }
 
 .input_field:hover,
-.input_field:focus {
-    border: 1px solid rgb(32, 119, 239);
+.input_field:focus,
+.input_field:active {
+    border: 0.5px solid rgb(32, 119, 239);
 }
 
 .searched_movies {
